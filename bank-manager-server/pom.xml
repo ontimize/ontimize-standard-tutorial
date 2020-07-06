@@ -9,6 +9,46 @@
 	</parent>
 	<artifactId>bank-manager-server</artifactId>
 
+	<properties>
+		<hsqldatabase.path>src/main/db</hsqldatabase.path>
+		<database.url>jdbc:hsqldb:hsql://localhost:9003/templateDB</database.url>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<compilerVersion>1.6</compilerVersion>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<nonFilteredFileExtensions>
+						<nonFilteredFileExtension>crt</nonFilteredFileExtension>
+						<nonFilteredFileExtension>dat</nonFilteredFileExtension>
+					</nonFilteredFileExtensions>
+				</configuration>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+
 	<dependencies>
 		<dependency>
 			<groupId>com.ontimize</groupId>
@@ -23,4 +63,55 @@
 		</dependency>
 
 	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>run_database</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<id>configure_database</id>
+								<phase>validate</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<available
+											file="${hsqldatabase.path}/templateDB.script"
+											property="database.exist" />
+										<echo message="${hsqldatabase.path}/templateDB.script" />
+										<copy tofile="${hsqldatabase.path}/templateDB.script"
+											file="${hsqldatabase.path}/templateDB.txt" />
+									</target>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.2.1</version>
+						<configuration>
+							<mainClass>org.hsqldb.Server</mainClass>
+							<arguments>
+								<argument>-port</argument>
+								<argument>9003</argument>
+								<argument>-database.0</argument>
+								<argument>${hsqldatabase.path}/templateDB</argument>
+								<argument>-dbname.0</argument>
+								<argument>templateDB</argument>
+							</arguments>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
 </project>
