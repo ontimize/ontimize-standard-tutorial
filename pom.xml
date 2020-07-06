@@ -1,14 +1,43 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.ontimize</groupId>
-  <artifactId>bank-manager</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>Bank Manager</name>
-  <description>Bank Manager</description>
-  <modules>
-  	<module>bank-manager-common</module>
-  	<module>bank-manager-server</module>
-  	<module>bank-manager-client</module>
-  </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ontimize</groupId>
+	<artifactId>bank-manager</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Bank Manager</name>
+	<description>Bank Manager</description>
+	<modules>
+		<module>bank-manager-common</module>
+		<module>bank-manager-server</module>
+		<module>bank-manager-client</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<ontimize.version>5.5.1</ontimize.version>
+		<hsqldb.version>1.8.0.10</hsqldb.version>
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+				<repository>
+					<id>imatia-artifactory</id>
+					<url>https://artifactory.imatia.com/public-artifactory/libs-release</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
 </project>
