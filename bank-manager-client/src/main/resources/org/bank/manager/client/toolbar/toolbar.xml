@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<ApplicationToolBar>
+    <ApToolBarButton attr="Managerabout" icon="com/ontimize/gui/images/iconimatia.gif" />
+    <ApToolBarSeparator width="12" />
+    <ApToolBarButton attr="Chat" icon="com/ontimize/gui/images/toolbar/userconnect2.png" />
+    <ApToolBarButton attr="ChangeTableFieldLook" icon="com/ontimize/gui/images/toolbar/window_colors.png" />
+
+    <ApToolBarButton icon="org/bank/manager/client/images/users.png" attr="Managerusers"></ApToolBarButton>
+    <ApToolBarFiller />
+    <ApToolBarButton attr="SendToTray" icon="com/ontimize/gui/images/sendtotray.png" />
+    <ApToolBarButton icon="com/ontimize/gui/images/toolbar/lock.png" attr="Lock" />
+    <ApToolBarButton attr="Exit" icon="com/ontimize/gui/images/toolbar/exit.png" />
+</ApplicationToolBar>

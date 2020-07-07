@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Form entity="" status="no" buttons="no">
+   <FormHeader standardbuttons="yes" />
+   <Column title="ChangePass">
+       <Row height="10" />
+<TextDataField required="yes" labelsize="18" attr="User_" dim="yes" />
+<Row height="5" />
+<PasswordDataField required="yes" labelsize="18" attr="Password" dim="yes" encrypt="no"/>
+<PasswordDataField required="yes" labelsize="18" attr="ConfirmPassword" dim="yes" encrypt="no"/>
+   </Column >
+   <Row height="5" />
+   <Row >
+       <Button key="accept" icon="com/ontimize/gui/images/ok.png" />
+<Button key="cancel" icon="com/ontimize/gui/images/cancel.png" />
+   </Row >
+   <Row height="10" />
+</Form>

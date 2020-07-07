@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<ApplicationMenuBar>
+   <Menu attr="Administracion">
+       <MenuItem attr="SendToTray" shortcut="ctrl T" icon="com/ontimize/gui/images/sendtotray.png" />
+       <MenuSeparator />
+       <MenuItem attr="ChangePassword" />
+       <MenuSeparator />
+       <MenuItem attr="Managerabout" />
+       <MenuSeparator />
+       <MenuItem attr="Lock" icon="com/ontimize/gui/images/padlock.png" shortcut="ctrl B" />
+       <MenuItem attr="Exit" icon="com/ontimize/gui/images/exit2.png" />
+   </Menu>
+
+   <MenuLocale attr="Language" resourceBundle="org.bank.manager.client.i18n.bundle">
+       <LocaleMenuItem attr="Spanish" locale="es_ES" />
+       <LocaleMenuItem attr="English" locale="en_US" />
+   </MenuLocale>
+
+   <Menu attr="Ontimize">
+       <MenuItem attr="Chat" icon="com/ontimize/gui/images/userconnect2.png" />
+       <MenuSeparator />
+       <MenuItem attr="ShortcutConfiguration" />
+       <CheckMenuItem attr="ShowHideStatusBar" />
+       <CheckMenuItem attr="ShowHideTableRowNumber" />
+       <CheckMenuItem attr="ShowHideToolbar" />
+       <MenuSeparator />
+       <MenuItem attr="FontSetup" icon="com/ontimize/gui/images/font.png" />
+           <Menu attr="Font">
+               <RadioItemGroup>
+                   <RadioMenuItem attr="SmallFont" />
+                   <RadioMenuItem attr="RegularFont" />
+                   <RadioMenuItem attr="LargeFont" />
+               </RadioItemGroup>
+           </Menu>
+       <MenuSeparator />
+       <MenuItem attr="ChangeTableFieldLook" icon="com/ontimize/gui/images/componentaspect.png" />
+       <MenuSeparator />
+       <MenuItem attr="SystemInformation" />
+   </Menu>
+
+   <Menu attr="Menumanagerusers">
+       <MenuItem attr="Managerusers"></MenuItem>
+   </Menu>
+</ApplicationMenuBar>

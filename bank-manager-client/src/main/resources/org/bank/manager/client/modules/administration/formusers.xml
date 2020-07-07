@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<FormExt entity="EUsers" keys="User_" columns="User_;Password;NAME;SURNAME;EMAIL;IDPROFILE;" title="formusers">
+    <FormHeader standardbuttons="yes" />
+ 
+    <TextDataField text="User_" attr="User_" dim="text" align="left" labelsize="16"/>
+    <PasswordDataField encrypt="no" text="Password" attr="Password" dim="text" align="left" labelsize="16"/>
+    <TextDataField text="NAME" attr="NAME" dim="text" align="left" labelsize="16"/>
+    <TextDataField text="SURNAME" attr="SURNAME" dim="text" align="left" labelsize="16"/>
+    <TextDataField text="EMAIL" attr="EMAIL" dim="text" align="left" labelsize="16"/>
+    <ReferenceComboDataField entity="EProfiles" cod="IDPROFILE" cols="PROFILE" text="IDPROFILE" attr="IDPROFILE" dim="text" align="left" labelsize="16"/>
+
+</FormExt>
