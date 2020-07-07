@@ -18,6 +18,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<ontimize.version>5.5.1</ontimize.version>
 		<hsqldb.version>1.8.0.10</hsqldb.version>
+		<logback.version>1.0.13</logback.version>
 	</properties>
 
 	<profiles>

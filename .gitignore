@@ -85,3 +85,4 @@ buildNumber.properties
 # End of https://www.toptal.com/developers/gitignore/api/maven,eclipse
 bank-manager-server/src/main/db/templateDB.log
 bank-manager-server/src/main/db/templateDB.properties
+bank-manager-server/server.log.file_IS_UNDEFINED
