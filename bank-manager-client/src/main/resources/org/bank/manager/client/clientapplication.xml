@@ -1,0 +1,19 @@
+<MainApplication 
+    title="Ontimize Training" 
+    splash="com/ontimize/gui/images/logoimatia.gif;com/ontimize/gui/images/logoimatiainf.gif"
+    loginicon="com/ontimize/gui/images/loginiconimatia.jpg"
+    icon="org/bank/manager/client/images/ontimize16x16.png"
+    preferences="OntimizeTraining.conf" 
+    logintext="session_start"
+    resources="org.bank.manager.client.i18n.bundle"
+    locale="es_ES"
+    encrypt="no">
+    <!--  Application configuration params  -->
+    <ReferenceLocator remotelocatorname="BankManager" 
+        local="false" 
+        class="com.ontimize.locator.ReferenceLocator" 
+        packageorhostname="localhost" 
+        port="49015" 
+        checkservermessagesperiod="4000" 
+    />
+</MainApplication>

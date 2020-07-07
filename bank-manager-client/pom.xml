@@ -17,4 +17,31 @@
 		</dependency>
 	</dependencies>
 
+	<profiles>
+		<profile>
+			<id>run_client</id>
+			<build>
+				<plugins>
+					<!-- =========================================================== -->
+					<!-- Ontimize Client Launcher -->
+					<!-- =========================================================== -->
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.2.1</version>
+						<configuration>
+							<mainClass>org.bank.manager.client.ClientLauncher</mainClass>
+							<arguments>
+								<argument>org/bank/manager/client/conf/labels.xml</argument>
+								<argument>org/bank/manager/client/clientapplication.xml</argument>
+								<argument>-conf</argument>
+								<argument>org/bank/manager/client/conf/defaultXmlConfigurationParameters.xml</argument>
+							</arguments>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
 </project>

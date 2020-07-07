@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<DefaultConfiguration>
+
+  <Colors>
+    <Color name="HeaderColor" value="0;51;153" />
+    <Color name="bgColorBlue" value="235;235;245" />
+    <Color name="bgColor" value="251;249;239" />
+  </Colors>
+
+  <Paints>
+    <Paint name="chartBgPaint" class="java.awt.GradientPaint">
+      <Parameter class="float">
+        <Value>0</Value>
+      </Parameter>
+      <Parameter class="float">
+        <Value>0</Value>
+      </Parameter>
+      <Parameter class="java.awt.Color">
+        <Value>236;233;216</Value>
+      </Parameter>
+      <Parameter class="float">
+        <Value>800</Value>
+      </Parameter>
+      <Parameter class="float">
+        <Value>0</Value>
+      </Parameter>
+      <Parameter class="java.awt.Color">
+        <Value>171;208;239</Value>
+      </Parameter>
+      <Parameter class="boolean">
+        <Value>false</Value>
+      </Parameter>
+    </Paint>
+    <Paint name="chartBgPaint2" class="java.awt.GradientPaint">
+      <Parameter class="float">
+        <Value>0</Value>
+      </Parameter>
+      <Parameter class="float">
+        <Value>0</Value>
+      </Parameter>
+      <Parameter class="java.awt.Color">
+        <Value>240;240;240</Value>
+      </Parameter>
+      <Parameter class="float">
+        <Value>800</Value>
+      </Parameter>
+      <Parameter class="float">
+        <Value>0</Value>
+      </Parameter>
+      <Parameter class="java.awt.Color">
+        <Value>209;222;225</Value>
+      </Parameter>
+      <Parameter class="boolean">
+        <Value>false</Value>
+      </Parameter>
+    </Paint>
+    <Paint name="linearGradientPaint2" class="java.awt.LinearGradientPaint">
+      <Parameter class="java.awt.geom.Point2D">
+        <Value class="java.awt.Point">
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+        </Value>
+      </Parameter>
+      <Parameter class="java.awt.geom.Point2D">
+        <Value class="java.awt.Point">
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>26</Value>
+          </Parameter>
+        </Value>
+      </Parameter>
+      <Parameter class="[F">
+        <Value>0.0f;0.4999f;0.5f;1f</Value>
+      </Parameter>
+      <Parameter class="[Ljava.awt.Color;">
+        <Value>#f2f2f2;#ebebeb;#dddddd;#cfcfcf</Value>
+      </Parameter>
+    </Paint>
+    <Paint name="linearGradientPaint" class="java.awt.LinearGradientPaint">
+      <Parameter class="java.awt.geom.Point2D">
+        <Value class="java.awt.Point">
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+        </Value>
+      </Parameter>
+      <Parameter class="java.awt.geom.Point2D">
+        <Value class="java.awt.Point">
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>26</Value>
+          </Parameter>
+        </Value>
+      </Parameter>
+      <Parameter class="[F">
+        <Value>0.0f;1f</Value>
+      </Parameter>
+      <Parameter class="[Ljava.awt.Color;">
+        <Value>#f0f0f0;#cbcbcb</Value>
+      </Parameter>
+    </Paint>
+    <Paint name="linearGradientPaint2" class="java.awt.LinearGradientPaint">
+      <Parameter class="java.awt.geom.Point2D">
+        <Value class="java.awt.Point">
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+        </Value>
+      </Parameter>
+      <Parameter class="java.awt.geom.Point2D">
+        <Value class="java.awt.Point">
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>26</Value>
+          </Parameter>
+        </Value>
+      </Parameter>
+      <Parameter class="[F">
+        <Value>0.0f;0.3f;0.5f;1f</Value>
+      </Parameter>
+      <Parameter class="[Ljava.awt.Color;">
+        <Value>#f2f2f2;#ebebeb;#dddddd;#cfcfcf</Value>
+      </Parameter>
+    </Paint>
+  </Paints>
+
+  <Borders>
+
+    <Border name="simpleLineBorder" class="javax.swing.border.LineBorder">
+      <Parameter class="java.awt.Color">
+        <Value class="java.awt.Color">
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+        </Value>
+      </Parameter>
+    </Border>
+
+    <Border name="empty" class="javax.swing.border.EmptyBorder">
+      <Parameter class="int">
+        <Value>0</Value>
+      </Parameter>
+      <Parameter class="int">
+        <Value>0</Value>
+      </Parameter>
+      <Parameter class="int">
+        <Value>0</Value>
+      </Parameter>
+      <Parameter class="int">
+        <Value>0</Value>
+      </Parameter>
+    </Border>
+
+    <Border name="empty3" class="javax.swing.border.EmptyBorder">
+      <Parameter class="int">
+        <Value>3</Value>
+      </Parameter>
+      <Parameter class="int">
+        <Value>3</Value>
+      </Parameter>
+      <Parameter class="int">
+        <Value>3</Value>
+      </Parameter>
+      <Parameter class="int">
+        <Value>3</Value>
+      </Parameter>
+    </Border>
+
+    <Border name="tableBorder" class="javax.swing.border.LineBorder">
+      <Parameter class="color">
+        <Value>#cccccc</Value>
+      </Parameter>
+      <Parameter class="int">
+        <Value>3</Value>
+      </Parameter>
+    </Border>
+
+    <Border name="defaultTableHeaderBorder" class="javax.swing.border.CompoundBorder">
+      <Parameter class="javax.swing.border.Border">
+        <Value class="javax.swing.border.MatteBorder">
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>1</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>1</Value>
+          </Parameter>
+          <Parameter class="color">
+            <Value>black</Value>
+          </Parameter>
+        </Value>
+      </Parameter>
+      <Parameter class="javax.swing.border.Border">
+        <Value class="javax.swing.border.MatteBorder">
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>1</Value>
+          </Parameter>
+          <Parameter class="color">
+            <Value>white</Value>
+          </Parameter>
+        </Value>
+      </Parameter>
+    </Border>
+    <Border name="tableHeaderLastColumnBorder" class="javax.swing.border.CompoundBorder">
+      <Parameter class="javax.swing.border.Border">
+        <Value class="javax.swing.border.MatteBorder">
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>1</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="color">
+            <Value>black</Value>
+          </Parameter>
+        </Value>
+      </Parameter>
+      <Parameter class="javax.swing.border.Border">
+        <Value class="javax.swing.border.MatteBorder">
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="color">
+            <Value>white</Value>
+          </Parameter>
+        </Value>
+      </Parameter>
+    </Border>
+
+    <Border name="mattedtoolbarlinebottom" class="javax.swing.border.CompoundBorder">
+      <Parameter class="javax.swing.border.Border">
+        <Value class="javax.swing.border.MatteBorder">
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>1</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="color">
+            <Value>138;138;168</Value>
+          </Parameter>
+        </Value>
+      </Parameter>
+      <Parameter class="javax.swing.border.Border">
+        <Value class="javax.swing.border.EmptyBorder">
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>1</Value>
+          </Parameter>
+          <Parameter class="int">
+            <Value>0</Value>
+          </Parameter>
+        </Value>
+      </Parameter>
+    </Border>
+
+  </Borders>
+
+  <StaticValues>
+    <Class name="com.ontimize.gui.preferences.BasicApplicationPreferences">
+      <StaticValue variable="remoteUserPreferences" value="true" />
+    </Class>
+    <Class name="com.ontimize.gui.BasicInteractionManager">
+      <StaticValue variable="CONFIRM_DELETE_DEFAULT_VALUE" value="true" />
+      <StaticValue variable="AVANCED_QUERY_DEFAULT_VALUE" value="true" />
+    </Class>
+    <Class name="com.ontimize.gui.table.Table">
+      <StaticValue variable="ORDER_COLS_BY_VISIBLE_COLS" value="true" />
+    </Class>
+    <Class name="com.ontimize.gui.field.DataField">
+      <StaticValue variable="defaultAsteriskColor" value="gray" />
+    </Class>
+    <Class name="com.ontimize.gui.table.SortTableCellRenderer">
+      <StaticValue variable="defaultVerticalHeaderMargin" value="5" />
+    </Class>
+
+    <Class name="com.ontimize.gui.table.CellRenderer">
+      <StaticValue variable="font" value="Verdana-PLAIN-10" />
+      <StaticValue variable="fontColor" value="#333333" />
+      <StaticValue variable="editableFontColor" value="#333333" />
+      <StaticValue variable="evenRowBackgroundColor" value="#f1f1f1" />
+      <StaticValue variable="oddRowBackgroundColor" value="white" />
+      <StaticValue variable="oddEditableBackgroundColor" value="#e7f8fd" />
+      <StaticValue variable="evenEditableBackgroundColor" value="#daebf0" />
+      <StaticValue variable="selectedBackgroundColor" value="#14b6eb" />
+      <StaticValue variable="selectedEditableBackgroundColor" value="#14b6eb" />
+    </Class>
+
+    <Class name="com.ontimize.gui.Form">
+      <StaticSetMethod method="setDefaultColorTitle" value="black"
+        datatype="java.awt.Color" />
+      <StaticSetMethod method="setDefaultTitlePaint" value="linearGradientPaint"
+        datatype="java.awt.Paint" />
+    </Class>
+  </StaticValues>
+
+
+  <XMLConfigurationParameters>
+    <Class name="com.ontimize.gui.ApplicationToolBar">
+      <Parameter key="buttonsize" value="30" />
+<!--      <Parameter key="border" value="mattedtoolbarlinebottom" />-->
+    </Class>
+    <Class name="com.ontimize.gui.container.Grid">
+      <Parameter key="opaque" value="no" />
+      <Parameter key="bgcolor" value="bgColor" />
+    </Class>
+    <Class name="com.ontimize.gui.container.Column">
+      <Parameter key="opaque" value="no" />
+      <Parameter key="bgcolor" value="bgColor" />
+    </Class>
+    <Class name="com.ontimize.gui.container.Scroll">
+      <Parameter key="opaque" value="no" />
+    </Class>
+    <Class name="com.ontimize.gui.container.Row">
+      <Parameter key="opaque" value="no" />
+      <Parameter key="bgcolor" value="bgColor" />
+    </Class>
+    <Class name="com.ontimize.gui.Form">
+      <Parameter key="bgcolor" value="bgColor" />
+      <Parameter key="tableviewminrowheight" value="21" />
+      <Parameter key="opaquebuttons" value="no" />
+      <Parameter key="highlightbuttons" value="yes" />
+      <Parameter key="borderbuttons" value="no" />
+    </Class>
+
+    <Class name="com.ontimize.gui.FormExt">
+      <Parameter key="statusborder" value="empty" />
+    </Class>
+
+    <Class name="com.ontimize.gui.container.FormHeader">
+      <Parameter key="opaquebuttons" value="no" />
+      <Parameter key="highlightbuttons" value="yes" />
+      <Parameter key="borderbuttons" value="no" />
+      <Parameter key="separator" value="yes" />
+      <Parameter key="opaque" value="no" />
+    </Class>
+    <Class name="com.ontimize.gui.table.Table">
+      <Parameter key="opaque" value="no" />
+      <Parameter key="showgrid" value="no" />
+      <Parameter key="minrowheight" value="23" />
+      <Parameter key="headerheight" value="26" />
+      <Parameter key="headerfg" value="black" />
+      <Parameter key="headerfont" value="Verdana-PLAIN-11" />
+      <Parameter key="fontshadowcolor" value="#e4e4e4" />
+      <Parameter key="headerbgimage" value="com/ontimize/gui/images/tableheader.jpg" />
+      <Parameter key="headerbggroupimage" value="com/ontimize/gui/images/tableheader_blue.jpg" />
+
+      <Parameter key="headerborder" value="defaultTableHeaderBorder" />
+      <Parameter key="headerlastcolumnborder" value="tableHeaderLastColumnBorder" />
+      <Parameter key="border" value="tableBorder" />
+
+      <Parameter key="borderbuttons" value="no" />
+      <Parameter key="opaquebuttons" value="no" />
+      <Parameter key="highlightbuttons" value="yes" />
+    </Class>
+
+    <Class name="com.ontimize.quickstart.client.utils.TableEditProcess">
+      <Parameter key="opaque" value="no" />
+      <Parameter key="showgrid" value="no" />
+      <Parameter key="headerfg" value="black" />
+      <Parameter key="headerfont" value="Verdana-PLAIN-11" />
+      <Parameter key="fontshadowcolor" value="#e4e4e4" />
+      <Parameter key="headerbgimage" value="com/ontimize/gui/images/tableheader.jpg" />
+      <Parameter key="headerbggroupimage" value="com/ontimize/gui/images/tableheader_blue.jpg" />
+      <Parameter key="headerborder" value="defaultTableHeaderBorder" />
+      <Parameter key="headerlastcolumnborder" value="tableHeaderLastColumnBorder" />
+      <Parameter key="border" value="tableBorder" />
+
+      <Parameter key="borderbuttons" value="no" />
+      <Parameter key="opaquebuttons" value="no" />
+      <Parameter key="highlightbuttons" value="yes" />
+    </Class>
+
+
+    <Class
+      name="com.ontimize.gui.field.DateDataField;com.ontimize.gui.field.HourDateDataField;
+com.ontimize.util.workflow.client.diagram.components.MaxExecutionDate">
+      <Parameter key="opaquebuttons" value="no" />
+      <Parameter key="highlightbuttons" value="yes" />
+      <Parameter key="borderbuttons" value="no" />
+      <Parameter key="opaque" value="yes" />
+    </Class>
+    <Class name="com.ontimize.gui.field.ImageDataField">
+      <Parameter key="opaquebuttons" value="no" />
+      <Parameter key="highlightbuttons" value="yes" />
+      <Parameter key="borderbuttons" value="no" />
+    </Class>
+    <Class name="com.ontimize.gui.field.ReferenceComboDataField">
+      <Parameter key="opaquebuttons" value="no" />
+      <Parameter key="highlightbuttons" value="yes" />
+      <Parameter key="borderbuttons" value="no" />
+      <Parameter key="opaque" value="yes" />
+    </Class>
+    <Class name="com.ontimize.gui.field.ReferenceExtDataField">
+      <Parameter key="opaquebuttons" value="no" />
+      <Parameter key="highlightbuttons" value="yes" />
+      <Parameter key="borderbuttons" value="no" />
+      <Parameter key="opaquebuttons" value="no" />
+    </Class>
+    <Class name="com.ontimize.gui.field.WWWDataField">
+      <Parameter key="opaquebuttons" value="no" />
+      <Parameter key="highlightbuttons" value="yes" />
+      <Parameter key="borderbuttons" value="no" />
+    </Class>
+    <Class name="com.ontimize.gui.field.Chart">
+      <Parameter key="opaque" value="no" />
+    </Class>
+    <Class name="com.ontimize.gui.container.TabPanel">
+      <Parameter key="bgcolor" value="bgColor" />
+      <Parameter key="opaque" value="yes" />
+    </Class>
+    <Class name="com.ontimize.gui.container.SplitPane">
+      <Parameter key="bgcolor" value="bgColor" />
+      <Parameter key="opaque" value="no" />
+    </Class>
+    <Class name="com.ontimize.gui.container.Tab">
+      <Parameter key="bgcolor" value="bgColor" />
+      <Parameter key="opaque" value="yes" />
+    </Class>
+    <Class name="com.ontimize.gui.field.TextDataField">
+      <Parameter key="opaque" value="yes" />
+    </Class>
+    <Class name="com.ontimize.gui.field.IntegerDataField">
+      <Parameter key="opaque" value="yes" />
+    </Class>
+    <Class name="com.ontimize.gui.field.MemoDataField">
+      <Parameter key="opaque" value="yes" />
+      <Parameter key="labelposition" value="top" />
+    </Class>
+    <Class name="com.ontimize.gui.field.WWWDataField">
+      <Parameter key="opaque" value="yes" />
+    </Class>
+    <Class name="com.ontimize.gui.field.MaskDataField">
+      <Parameter key="opaque" value="yes" />
+    </Class>
+    <Class name="com.ontimize.gui.field.NIFDataField">
+      <Parameter key="opaque" value="yes" />
+    </Class>
+    <Class name="com.ontimize.gui.field.CurrencyDataField">
+      <Parameter key="opaque" value="yes" />
+    </Class>
+  </XMLConfigurationParameters>
+
+</DefaultConfiguration>
