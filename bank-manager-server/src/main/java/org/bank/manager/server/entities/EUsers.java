@@ -7,7 +7,7 @@ import com.ontimize.locator.EntityReferenceLocator;
 public class EUsers extends UserEntity {
  
  static {
-  UserEntity.encrypt = false;
+  UserEntity.encrypt = true;
  }
  
     public EUsers(EntityReferenceLocator locator, DatabaseConnectionManager databaseConnectionManager, int port) throws Exception {
