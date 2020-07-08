@@ -62,11 +62,11 @@
 			<version>${hsqldb.version}</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.ontimize</groupId>
-			<artifactId>ontimize-license</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.ontimize</groupId> -->
+<!-- 			<artifactId>ontimize-license</artifactId> -->
+<!-- 			<version>0.0.1-SNAPSHOT</version> -->
+<!-- 		</dependency> -->
 
 	</dependencies>
 

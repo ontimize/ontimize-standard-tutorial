@@ -15,6 +15,19 @@
 			<artifactId>bank-manager-common</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		
+		<dependency>
+        <groupId>com.ontimize</groupId>
+        <artifactId>ontimize-more-plaf-j7</artifactId>
+        <version>${plaf.version}</version>
+    </dependency>
+    
+        <dependency>
+        <groupId>com.ontimize</groupId>
+        <artifactId>ontimize-more-plaf-styles-white</artifactId>
+        <version>${plaf-style.version}</version>
+    </dependency>
+		
 	</dependencies>
 
 	<profiles>

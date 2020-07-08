@@ -12,5 +12,6 @@
 <booleanAttribute key="M2_UPDATE_SNAPSHOTS" value="false"/>
 <stringAttribute key="M2_USER_SETTINGS" value=""/>
 <booleanAttribute key="M2_WORKSPACE_RESOLUTION" value="false"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dcom.ontimize.gui.lafclassname=&quot;com.ontimize.plaf.OntimizeLookAndFeel&quot;&#13;&#10;-Dcom.ontimize.gui.lafstyle=&quot;com/ontimize/plaf/style/whiteStyle.css&quot;"/>
 <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:/bank-manager-client}"/>
 </launchConfiguration>
