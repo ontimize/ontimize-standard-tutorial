@@ -1,0 +1,17 @@
+<FormExt entity="EAccounts" keys="ENTITYID;OFFICEID;CDID;ANID"
+	columns="ANID;CDID;ENTITYID;OFFICEID" title="formaccounts">
+	<FormHeader standardbuttons="yes" />
+	<TextDataField attr="ENTITYID" text="ENTITYID" dim="text"
+		align="left" labelsize="16" required="yes" />
+	<ReferenceComboDataField attr="OFFICEID"
+		text="OFFICEID" entity="EBranches" cod="OFFICEID" cols="NAME"
+		dim="text" align="left" labelsize="16" required="yes" />
+	<TextDataField text="CDID" attr="CDID" dim="text"
+		align="left" labelsize="16" required="yes" />
+	<TextDataField text="ANID" attr="ANID" dim="text"
+		align="left" labelsize="16" required="yes" />
+	<DateDataField text="STARTDATE" attr="STARTDATE"
+		dim="text" align="left" labelsize="16" />
+	<DateDataField text="ENDDATE" attr="ENDDATE" dim="text"
+		align="left" labelsize="16" />
+</FormExt>

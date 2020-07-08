@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Node entity="EAccounts"
+    text="EAccounts"
+    attr="ENTITYID;OFFICEID;CDID;ANID;BALANCE;STARTDATE;ENDDATE"
+    form="formaccounts.xml"
+    keys="ANID;CDID;ENTITYID;OFFICEID"
+    separator=" ">
+</Node>

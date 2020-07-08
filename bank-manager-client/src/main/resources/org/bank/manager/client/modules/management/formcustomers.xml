@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<FormExt entity="ECustomers" keys="CUSTOMERID"
+	columns="CUSTOMERID" title="formcustomers">
+	<FormHeader standardbuttons="yes" />
+
+	<IntegerDataField text="CUSTOMERID" attr="CUSTOMERID"
+		dim="text" align="left" labelsize="16" />
+	<ReferenceComboDataField
+		entity="ECustomerTypes" cod="CUSTOMERTYPEID" cols="DESCRIPTION"
+		text="CUSTOMERTYPEID" attr="CUSTOMERTYPEID" dim="text" align="left"
+		labelsize="16" />
+	<TextDataField text="NAME" attr="NAME" dim="text"
+		align="left" labelsize="16" />
+	<TextDataField text="ADDRESS" attr="ADDRESS" dim="text"
+		align="left" labelsize="16" />
+	<Column title="COMMENTS">
+		<MemoDataField rows="4" labelvisible="no"
+			text="COMMENTS" attr="COMMENTS" dim="text" align="left"
+			labelsize="16" />
+	</Column>
+	<DateDataField text="STARTDATE" attr="STARTDATE"
+		dim="text" align="left" labelsize="16" />
+	<ImageDataField text="PHOTO" attr="PHOTO" dim="text"
+		align="left" labelsize="16" />
+	<TextDataField text="SURNAME" attr="SURNAME" dim="text"
+		align="left" labelsize="16" />
+	<TextDataField text="ID" attr="ID" dim="text"
+		align="left" labelsize="16" />
+	<TextDataField text="PHONE" attr="PHONE" dim="text"
+		align="left" labelsize="16" />
+	<TextDataField text="EMAIL" attr="EMAIL" dim="text"
+		align="left" labelsize="16" />
+
+	<Table entity="ECustomerAccounts" key="CUSTOMERID"
+		parentkey="CUSTOMERID"
+		cols="CUSTOMERID;ENTITYID;OFFICEID;CDID;ANID;ACCOUNT"
+		keys="ENTITYID;OFFICEID;CDID;ANID" />
+</FormExt>

@@ -23,4 +23,7 @@
 		form="modules/administration/formusers.xml"
 		imanager="com.ontimize.gui.BasicInteractionManager"
 		tree="modules/administration/treemanagerusers.xml"></FormManager>
+		
+	<FormManager id="Manageraccounts" form="modules/management/formaccounts.xml"  imanager="com.ontimize.gui.BasicInteractionManager" tree="modules/management/treemanageraccounts.xml"/>
+	<FormManager id="Managercustomers" form="modules/management/formcustomers.xml" imanager="com.ontimize.gui.BasicInteractionManager" tree="modules/management/treemanagercustomers.xml"></FormManager>
 </MainApplication>

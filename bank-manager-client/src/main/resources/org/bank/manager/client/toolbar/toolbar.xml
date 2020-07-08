@@ -7,6 +7,9 @@
 
     <ApToolBarButton icon="org/bank/manager/client/images/users.png" attr="Managerusers"></ApToolBarButton>
     <ApToolBarFiller />
+    <ApToolBarButton icon="org/bank/manager/client/images/accounts.png" attr="Manageraccounts"></ApToolBarButton>
+    <ApToolBarButton icon="org/bank/manager/client/images/customer.png" attr="Managercustomers"></ApToolBarButton>
+    <ApToolBarFiller/>
     <ApToolBarButton attr="SendToTray" icon="com/ontimize/gui/images/sendtotray.png" />
     <ApToolBarButton icon="com/ontimize/gui/images/toolbar/lock.png" attr="Lock" />
     <ApToolBarButton attr="Exit" icon="com/ontimize/gui/images/toolbar/exit.png" />
