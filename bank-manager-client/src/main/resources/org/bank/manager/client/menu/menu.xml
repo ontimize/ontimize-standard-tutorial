@@ -55,4 +55,7 @@
 	<Menu attr="Menumanagercustomers">
 		<MenuItem attr="Managercustomers"></MenuItem>
 	</Menu>
+	<Menu attr="Menumanagerprofiles">
+		<MenuItem attr="Managerprofiles"></MenuItem>
+	</Menu>
 </ApplicationMenuBar>

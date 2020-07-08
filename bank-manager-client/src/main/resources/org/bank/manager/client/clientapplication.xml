@@ -7,9 +7,11 @@
 	encrypt="no">
 	<!-- Application configuration params -->
 	<ReferenceLocator remotelocatorname="BankManager"
-		local="false" class="com.ontimize.locator.ReferenceLocator"
+		local="false" class="com.ontimize.locator.PermissionReferenceLocator"
 		packageorhostname="localhost" port="49015"
-		checkservermessagesperiod="4000" />
+		checkservermessagesperiod="4000"
+		ClientPermissionColumn="XMLCLIENT"
+		 />
 	<Menu archive="menu/menu.xml" />
 	<MenuListener
 		class="org.bank.manager.client.menu.AppMenuListener" />
@@ -26,4 +28,5 @@
 		
 	<FormManager id="Manageraccounts" form="modules/management/formaccounts.xml"  imanager="com.ontimize.gui.BasicInteractionManager" tree="modules/management/treemanageraccounts.xml"/>
 	<FormManager id="Managercustomers" form="modules/management/formcustomers.xml" imanager="com.ontimize.gui.BasicInteractionManager" tree="modules/management/treemanagercustomers.xml"></FormManager>
+	<FormManager id="Managerprofiles" form="modules/administration/formprofiles.xml" imanager="com.ontimize.gui.BasicInteractionManager"></FormManager>
 </MainApplication>

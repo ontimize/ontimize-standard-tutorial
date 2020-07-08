@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<FormExt entity="EProfiles" keys="IDPROFILE" columns="IDPROFILE;PROFILE" title="formprofiles">
+    <FormHeader standardbuttons="yes" />
+    <IntegerDataField text="IDPROFILE" attr="IDPROFILE" dim="text" align="left" labelsize="16" visible="no"/>
+    <TextDataField text="PROFILE" attr="PROFILE" dim="text" align="left" labelsize="16"/>
+    <SplitPane orientation="vertical">
+        <SplitPane orientation="horizontal">
+            <Column title="XMLCLIENT">
+                <XMLDataField rows="4" labelvisible="no" text="XMLCLIENT" attr="XMLCLIENT" dim="text" align="left" labelsize="16" expand="yes" />
+            </Column>
+            <Column title="XMLSERVER">
+                <ServerPermissionComponent rows="4" labelvisible="no" text="XMLSERVER" attr="XMLSERVER" dim="text" align="left" labelsize="16" expand="yes" />
+            </Column>
+        </SplitPane>
+        <Table entity="EUsers" key="USER_" parentkey="IDPROFILE" cols="USER_;NAME;SURNAME;IDPROFILE" />
+    </SplitPane>
+</FormExt>

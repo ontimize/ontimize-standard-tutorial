@@ -6,6 +6,7 @@
     <ApToolBarButton attr="ChangeTableFieldLook" icon="com/ontimize/gui/images/toolbar/window_colors.png" />
 
     <ApToolBarButton icon="org/bank/manager/client/images/users.png" attr="Managerusers"></ApToolBarButton>
+    <ApToolBarButton icon="org/bank/manager/client/images/profiles.png" attr="Managerprofiles"></ApToolBarButton>
     <ApToolBarFiller />
     <ApToolBarButton icon="org/bank/manager/client/images/accounts.png" attr="Manageraccounts"></ApToolBarButton>
     <ApToolBarButton icon="org/bank/manager/client/images/customer.png" attr="Managercustomers"></ApToolBarButton>
