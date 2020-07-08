@@ -34,6 +34,12 @@
 			<version>${permission.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.ontimize</groupId>
+			<artifactId>bank-manager-server</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<profiles>
@@ -53,6 +59,31 @@
 							<arguments>
 								<argument>org/bank/manager/client/conf/labels.xml</argument>
 								<argument>org/bank/manager/client/clientapplication.xml</argument>
+								<argument>-conf</argument>
+								<argument>org/bank/manager/client/conf/defaultXmlConfigurationParameters.xml</argument>
+							</arguments>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>run_client_stand_alone</id>
+			<build>
+				<plugins>
+					<!-- =========================================================== -->
+					<!-- Ontimize Client Launcher Stand Alone -->
+					<!-- =========================================================== -->
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.2.1</version>
+						<configuration>
+							<mainClass>org.bank.manager.client.ClientLauncher</mainClass>
+							<arguments>
+								<argument>org/bank/manager/client/conf/labels.xml</argument>
+								<argument>org/bank/manager/client/clientapplicationlocal.xml</argument>
 								<argument>-conf</argument>
 								<argument>org/bank/manager/client/conf/defaultXmlConfigurationParameters.xml</argument>
 							</arguments>

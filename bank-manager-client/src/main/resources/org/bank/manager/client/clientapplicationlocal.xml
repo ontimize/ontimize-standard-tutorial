@@ -7,9 +7,15 @@
 	encrypt="no">
 	<!-- Application configuration params -->
 	<ReferenceLocator remotelocatorname="BankManager"
-		local="false" class="com.ontimize.locator.PermissionReferenceLocator"
-		packageorhostname="localhost" port="49015"
-		checkservermessagesperiod="4000" ClientPermissionColumn="XMLCLIENT" />
+		local="true" class="com.ontimize.locator.PermissionReferenceLocator"
+		packageorhostname="org.bank.manager.server.entities." port="49015"
+		checkservermessagesperiod="4000" ClientPermissionColumn="XMLCLIENT"
+		DatabaseProperties="org/bank/manager/server/conf/database.properties"
+		EntityProperties="org/bank/manager/server/conf/entities.properties"
+		LoginEntity="EUsers"
+		AutonumericalProperties="org/bank/manager/server/conf/autonumerical.properties"
+		ProfileColumn="IDPROFILE" ServerPermissionColumn="XMLSERVER"
+		PermissionEntity="EUsers" />
 	<Menu archive="menu/menu.xml" />
 	<MenuListener
 		class="org.bank.manager.client.menu.AppMenuListener" />
@@ -23,6 +29,7 @@
 		form="modules/administration/formusers.xml"
 		imanager="com.ontimize.gui.BasicInteractionManager"
 		tree="modules/administration/treemanagerusers.xml"></FormManager>
+
 	<FormManager id="Manageraccounts"
 		form="modules/management/formaccounts.xml"
 		imanager="org.bank.manager.client.modules.management.IMAccounts"
@@ -31,7 +38,8 @@
 		form="modules/management/formcustomers.xml"
 		imanager="org.bank.manager.client.modules.management.IMCustomers"
 		tree="modules/management/treemanagercustomers.xml">
-		<FManager form="formaccounts.xml" fmid="Manageraccounts" />
+		<InteractionManager form="formaccounts.xml"
+			class="com.ontimize.gui.BasicInteractionManager" />
 	</FormManager>
 	<FormManager id="Managerprofiles"
 		form="modules/administration/formprofiles.xml"
