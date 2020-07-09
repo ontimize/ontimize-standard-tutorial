@@ -37,7 +37,7 @@
         </Tab>
         <Tab attr="Comments">
             <Row expand="yes" title="">
-                <MemoDataField attr="COMMENTS" labelvisible="no" expand="yes" dim="text" />
+                <MemoDataField font="Verdana" attr="COMMENTS" labelvisible="no" expand="yes" dim="text" />
             </Row>
         </Tab>
     </TabPanel>
