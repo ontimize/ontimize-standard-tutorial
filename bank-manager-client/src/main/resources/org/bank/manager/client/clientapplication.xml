@@ -1,7 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- File to describe the application modules -->
 <MainApplication title="Ontimize Training"
 	splash="com/ontimize/gui/images/logoimatia.gif;com/ontimize/gui/images/logoimatiainf.gif"
 	loginicon="com/ontimize/gui/images/loginiconimatia.jpg"
-	icon="org/bank/manager/client/images/ontimize16x16.png"
+	icon="com/ontimize/gui/images/iconimatia.gif"
 	preferences="OntimizeTraining.conf" logintext="session_start"
 	resources="org.bank.manager.client.i18n.bundle" locale="es_ES"
 	encrypt="no">
@@ -10,6 +12,7 @@
 		local="false" class="com.ontimize.locator.PermissionReferenceLocator"
 		packageorhostname="localhost" port="49015"
 		checkservermessagesperiod="4000" ClientPermissionColumn="XMLCLIENT" />
+	<!-- Menu and toolbar configuration -->
 	<Menu archive="menu/menu.xml" />
 	<MenuListener
 		class="org.bank.manager.client.menu.AppMenuListener" />
@@ -35,5 +38,14 @@
 	</FormManager>
 	<FormManager id="Managerprofiles"
 		form="modules/administration/formprofiles.xml"
-		imanager="com.ontimize.gui.BasicInteractionManager"></FormManager>
+		imanager="com.ontimize.gui.BasicInteractionManager"
+		tree="modules/administration/treeprofiles.xml"></FormManager>
+	<FormManager id="Managermovements"
+		form="modules/management/formmovements.xml"
+		imanager="com.ontimize.gui.BasicInteractionManager"
+		tree="modules/management/treemovements.xml"></FormManager>
+	<FormManager id="Managerbranches"
+		form="modules/management/formbranches.xml"
+		imanager="com.ontimize.gui.BasicInteractionManager"
+		tree="modules/management/treebranches.xml"></FormManager>
 </MainApplication>

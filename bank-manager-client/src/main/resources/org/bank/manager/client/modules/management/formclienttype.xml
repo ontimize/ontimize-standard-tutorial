@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<FormExt entity="ECustomerTypes" title="CustomerType" keys="CUSTOMERTYPEID" columns="CUSTOMERTYPEID;DESCRIPTION">
+    <FormHeader standardbuttons="yes" />
+    <Row height="20" />
+    <Row>
+        <IntegerDataField attr="CUSTOMERTYPEID" visible="no" enabled="no" />
+        <TextDataField labelsize="16" attr="DESCRIPTION" dim="text" border="lowered" required="yes" />
+    </Row>
+    <Row height="20" />
+</FormExt>

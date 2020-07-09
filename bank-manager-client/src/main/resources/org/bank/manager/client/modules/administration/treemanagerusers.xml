@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
-<Node entity="EUsers" 
-    text="EUsers"
-    attr="USER_;NAME;SURNAME"
-    form="formusers.xml"
-    keys="USER_"
-    separator=" ">
+<Node entity="EUsers"
+   text="EUsers"
+   attr="USER_;NAME;SURNAME"
+   form="formusers.xml"
+   keys="USER_"
+   separator=" "
+   iconorg="org/bank/manager/client/images/users.png"
+   iconnoorg="org/bank/manager/client/images/userstree.gif">
 </Node>

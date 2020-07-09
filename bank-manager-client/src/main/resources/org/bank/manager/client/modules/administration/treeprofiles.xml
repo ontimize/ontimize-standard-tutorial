@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Node entity="EProfiles" text="Profiles" attr="PROFILE"
+    sortattr="PROFILE" form="formprofiles.xml" keys="IDPROFILE"
+    iconorg="org/bank/manager/client/images/profiles.png"
+    iconnoorg="org/bank/manager/client/images/profiletree.png" separator=" - ">
+    <Node entity="EUsers" text="EUsers" attr="USER_;NAME;SURNAME"
+        sortattr="USER_" form="formusers.xml" keys="USER_"
+        parentkeys="IDPROFILE;IDPROFILE"
+        iconorg="org/bank/manager/client/images/users.png"
+        iconnoorg="org/bank/manager/client/images/userstree.png" separator=" ">
+    </Node>
+</Node>

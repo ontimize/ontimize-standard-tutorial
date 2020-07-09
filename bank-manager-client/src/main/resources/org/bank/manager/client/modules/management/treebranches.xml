@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Node id="BRANCHES" entity="EBranches" text="Branches" attr="OFFICEID;NAME"
+  sortattr="OFFICEID" form="formbranches.xml" keys="OFFICEID" separator=" "
+  hideattr="OFFICEID"
+  iconorg="org/bank/manager/client/images/branches.png"
+  iconnoorg="org/bank/manager/client/images/bluetree.png">
+</Node>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<FormExt entity="EBranches" keys="OFFICEID" columns="OFFICEID;NAME;ADDRESS" title="branchmanagement">
+    <FormHeader standardbuttons="yes" />
+    <Row>
+        <Column title="Branch" expand="no">
+            <MaskDataField attr="OFFICEID" mask="0000" exactmatch="yes" dim="no" labelvisible="no" required="yes" labelsize="14" enabled="yes" />
+        </Column>
+        <Column title="Data" expand="yes">
+            <Row>
+                <TextDataField labelsize="14" attr="NAME" size="15" dim="text" required="yes" />
+                <DateDataField labelsize="14" size="10" attr="STARTDATE" dim="no" />
+            </Row>
+            <Row>
+                <TextDataField labelsize="14" attr="ADDRESS" size="15" dim="text" required="yes" />
+           </Row>
+        </Column>
+    </Row>
+    <Column>
+        <Row expand="yes" title="Comments">
+            <MemoDataField attr="DETAILS" labelvisible="no" expand="yes" dim="text" />
+       </Row>
+    </Column>
+</FormExt>

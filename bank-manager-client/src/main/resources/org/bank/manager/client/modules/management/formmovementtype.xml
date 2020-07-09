@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<FormExt entity="EMovementTypes" title="EMovementTypes"  keys="MOVEMENTTYPEID" columns="MOVEMENTTYPEID;DESCRIPTION">
+    <FormHeader standardbuttons="yes" />
+    <Row>
+        <IntegerDataField attr="MOVEMENTTYPEID" visible="no" enabled="no" />
+        <TextDataField labelsize="16" attr="DESCRIPTION" dim="text" border="lowered" required="yes" />
+    </Row>
+</FormExt>

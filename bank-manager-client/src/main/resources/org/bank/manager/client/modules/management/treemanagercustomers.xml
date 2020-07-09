@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
-<Node entity="ECustomers"
-    text="ECustomers"
-    attr="NAME;SURNAME"
-    form="formcustomers.xml"
-    keys="CUSTOMERID"
-    separator=" ">
+<Node id="CUSTOMERS" entity="ECustomers" text="ECustomers" attr="CUSTOMERID;ID;NAME;SURNAME"
+  hideattr="CUSTOMERID" sortattr="ID" form="formcustomers.xml" separator=" "
+  keys="CUSTOMERID" iconorg="org/bank/manager/client/images/customer.png"
+  iconnoorg="org/bank/manager/client/images/customertree.png">
+  <Node id="ECustomerAccountBalance" entity="ECustomerAccountBalance"
+    text="ECustomerAccountBalance" attr="ENTITYID;OFFICEID;CDID;ANID;BALANCE;CUSTOMERID;ACCOUNT"
+    hideattr="ENTITYID;OFFICEID;CDID;ANID;BALANCE;CUSTOMERID" sortattr="ACCOUNT"
+    form="formaccounts.xml" keys="ENTITYID;OFFICEID;CDID;ANID"
+    parentkeys="CUSTOMERID;CUSTOMERID" separator=" "
+    iconorg="org/bank/manager/client/images/moneytree.png"
+    iconnoorg="org/bank/manager/client/images/bluetree.png">
+  </Node>
 </Node>

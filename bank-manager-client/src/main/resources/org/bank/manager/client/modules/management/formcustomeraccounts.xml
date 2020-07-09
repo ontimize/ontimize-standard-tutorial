@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<FormExt entity="ECustomerAccounts" keys="CUSTOMERID"
+  parentkeys="ENTITYID;OFFICEID;CDID;ANID" columns="ACCOUNT;NAME;SURNAME;ID"
+  title="ECustomerAccounts">
+  <FormHeader standardbuttons="yes" />
+  <Row align="left">
+    <Column title="Account" expand="no">
+      <Row height="6" />
+      <Row>
+        <MaskDataField attr="ENTITYID" mask="0000" dim="no"
+          labelvisible="no" labelsize="14" enabled="yes" />
+        <MaskDataField attr="OFFICEID" mask="0000" dim="no"
+          labelvisible="no" labelsize="14" enabled="yes" />
+        <MaskDataField attr="CDID" mask="00" dim="no"
+          labelvisible="no" labelsize="14" enabled="yes" />
+        <MaskDataField attr="ANID" mask="0000000000" dim="no"
+          labelvisible="no" labelsize="14" enabled="yes" />
+      </Row>
+      <Row height="6" />
+    </Column>
+    <Column title="Client" expand="yes">
+      <Row height="6" />
+      <Row expand="yes" expandlast="yes">
+          <ReferenceComboDataField labelsize="7"
+          size="20" attr="CUSTOMERID" entity="ECustomers" cod="CUSTOMERID"
+          cols="ID;NAME;SURNAME" dim="text" form="formcustomers.xml"
+          labelvisible="yes" />
+      </Row>
+      <Row height="6" />
+    </Column>
+  </Row>
+</FormExt>

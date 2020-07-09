@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<FormExt entity="EMovements" keys="MOVEMENTID"
+  columns="MOVEMENTID;DATE_;MOVEMENT;ENTITYID;OFFICEID;CDID;ANID" title="movementmanagement"
+  parentkeys="ENTITYID;OFFICEID;CDID;ANID">
+  <FormHeader standardbuttons="yes" />
+  <IntegerDataField attr="MOVEMENTID" enabled="no"
+    visible="no" />
+
+  <Column>
+    <Row align="left" layout="flow" title="AccountNumber">
+      <MaskDataField required="yes" attr="ENTITYID" mask="0000"
+        dim="no" labelvisible="no" labelsize="14" enabled="yes" />
+      <MaskDataField required="yes" attr="OFFICEID" mask="0000"
+        dim="no" labelvisible="no" labelsize="14" enabled="yes" />
+      <MaskDataField required="yes" attr="CDID" mask="00"
+        dim="no" labelvisible="no" labelsize="14" enabled="yes" />
+      <MaskDataField required="yes" attr="ANID" mask="0000000000"
+        dim="no" labelvisible="no" labelsize="14" enabled="yes" />
+    </Row>
+
+    <Column title="Data" align="left" expand="yes">
+      <Row>
+        <TextDataField required="yes" labelsize="16" attr="CONCEPT"
+          size="4" dim="text" />
+      </Row>
+      <Row layout="flow" align="left">
+        <CurrencyDataField required="yes" attr="MOVEMENT"
+          text="Movement" labelsize="16" size="8" align="left" dim="no" />
+        <DateDataField required="yes" labelsize="9" size="8"
+          attr="DATE_" dim="no" align="left" />
+      </Row>
+      <Row>
+        <ReferenceComboDataField labelsize="16"
+          size="20" align="left" attr="MOVEMENTTYPEID" entity="EMovementTypes"
+          required="yes" cod="MOVEMENTTYPEID" cols="DESCRIPTION" dim="no"
+          form="formmovementtype.xml" />
+      </Row>
+    </Column>
+    <Row expand="yes" title="Comments">
+      <MemoDataField attr="COMMENTS" labelvisible="no"
+        expand="yes" dim="text" />
+    </Row>
+  </Column>
+</FormExt>

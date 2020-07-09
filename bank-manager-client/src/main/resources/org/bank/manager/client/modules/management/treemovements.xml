@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Node id="MOVEMENTS" entity="EMovements" text="Movements"
+  attr="MOVEMENTID;ACCOUNT;DATE_;MOVIMIENTO" hideattr="MOVEMENTID"
+  sortattr="DATE_" form="formmovements.xml" keys="MOVEMENTID" separator=" "
+  iconorg="org/bank/manager/client/images/movements.png"
+  iconnoorg="org/bank/manager/client/images/bluetree.png">
+</Node>
