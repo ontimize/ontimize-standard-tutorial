@@ -28,7 +28,7 @@
 		tree="modules/administration/treemanagerusers.xml"></FormManager>
 	<FormManager id="Manageraccounts"
 		form="modules/management/formaccounts.xml"
-		imanager="org.bank.manager.client.modules.management.IMAccounts"
+		imanager="org.bank.manager.client.modules.management.IMAccountsRenderer"
 		tree="modules/management/treemanageraccounts.xml"></FormManager>
 	<FormManager id="Managercustomers"
 		form="modules/management/formcustomers.xml"
