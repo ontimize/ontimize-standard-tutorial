@@ -22,6 +22,12 @@
 		<plaf.version>1.0.9</plaf.version>
 		<plaf-style.version>1.3.2</plaf-style.version>
 		<permission.version>3.0.6</permission.version>
+		<commons-io.version>2.4</commons-io.version>
+		<commons-logging.version>1.2</commons-logging.version>
+		<dynclass.version>0.0.1</dynclass.version>
+		<freemarker.version>2.3.8</freemarker.version>
+		<jooreports.version>2.0.0</jooreports.version>
+		<xom.version>1.2.5</xom.version>
 	</properties>
 
 	<profiles>

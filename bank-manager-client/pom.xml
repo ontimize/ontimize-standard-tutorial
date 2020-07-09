@@ -39,7 +39,36 @@
 			<artifactId>bank-manager-server</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${commons-logging.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>dynclass</groupId>
+			<artifactId>dynclass</artifactId>
+			<version>${dynclass.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${freemarker.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf</groupId>
+			<artifactId>jooreports</artifactId>
+			<version>${jooreports.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>xom</groupId>
+			<artifactId>xom</artifactId>
+			<version>${xom.version}</version>
+		</dependency>
 	</dependencies>
 
 	<profiles>

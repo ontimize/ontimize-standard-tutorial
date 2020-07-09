@@ -11,11 +11,6 @@ public class IMAccounts extends BasicInteractionManager{
 	public void registerInteractionManager(Form form, IFormManager formManager) {
 		// TODO Auto-generated method stub
 		super.registerInteractionManager(form, formManager);
-		DataComponent component = this.managedForm.getDataFieldReference("STARTDATE");
-		if (component != null) {
-			component.setVisible(false);
-		}
-		
 	}
 	
 }
