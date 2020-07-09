@@ -8,5 +8,6 @@
     <TextDataField text="SURNAME" attr="SURNAME" dim="text" align="left" labelsize="16"/>
     <TextDataField text="EMAIL" attr="EMAIL" dim="text" align="left" labelsize="16"/>
     <ReferenceComboDataField entity="EProfiles" cod="IDPROFILE" cols="PROFILE" text="IDPROFILE" attr="IDPROFILE" dim="text" align="left" labelsize="16"/>
+	<Button key="checkUserConnection" text="CheckUserConnection" />
 
 </FormExt>

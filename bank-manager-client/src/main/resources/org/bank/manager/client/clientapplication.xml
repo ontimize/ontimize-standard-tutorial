@@ -24,7 +24,7 @@
 		imanager="com.ontimize.gui.BasicInteractionManager" />
 	<FormManager id="Managerusers"
 		form="modules/administration/formusers.xml"
-		imanager="com.ontimize.gui.BasicInteractionManager"
+		imanager="org.bank.manager.client.modules.administration.IMUsers"
 		tree="modules/administration/treemanagerusers.xml"></FormManager>
 	<FormManager id="Manageraccounts"
 		form="modules/management/formaccounts.xml"
@@ -42,7 +42,7 @@
 		tree="modules/administration/treeprofiles.xml"></FormManager>
 	<FormManager id="Managermovements"
 		form="modules/management/formmovements.xml"
-		imanager="com.ontimize.gui.BasicInteractionManager"
+		imanager="org.bank.manager.client.modules.management.IMMovements"
 		tree="modules/management/treemovements.xml"></FormManager>
 	<FormManager id="Managerbranches"
 		form="modules/management/formbranches.xml"

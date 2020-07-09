@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Form entity="" buttons="no" status="no">
+    <Row bgcolor="#FFFFFF" title="ConnectedUsers" expandlast="yes" expand="yes">
+        <MemoDataField attr="usersList" dim="text" expand="yes" labelvisible="no" />
+    </Row>
+</Form>
