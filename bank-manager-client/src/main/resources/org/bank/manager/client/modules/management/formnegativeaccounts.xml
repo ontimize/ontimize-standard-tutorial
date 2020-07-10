@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<FormExt entity="EAccounts" keys="ANID;CDID;ENTITYID;OFFICEID" columns="ANID;CDID;ENTITYID;OFFICEID" title="formaccounts">
+    <FormHeader standardbuttons="yes" />
+    <Label align="left" attr="negativeBalance" bold="yes" fontcolor="red" fontsize="14" text="negativeBalance" valign="center"></Label>
+    <IntegerDataField attr="CUSTOMERID" visible="no" />
+    <Row align="left">
+        <Column title="AccountNumber" expand="no">
+            <Row>
+                <MaskDataField required="yes" attr="ENTITYID" mask="0000" dim="no" labelvisible="no" labelsize="14" enabled="yes" />
+                <MaskDataField required="yes" attr="OFFICEID" mask="0000" dim="no" labelvisible="no" labelsize="14" enabled="yes" />
+                <MaskDataField required="yes" attr="CDID" mask="00" dim="no" labelvisible="no" labelsize="14" enabled="yes" />
+                <MaskDataField required="yes" attr="ANID" mask="0000000000" dim="no" labelvisible="no" labelsize="14" enabled="yes" />
+            </Row>
+        </Column>
+        <Column title="ActualBalance" align="left" expand="no">
+            <Row>
+                <TextDataField labelsize="8" attr="BALANCE" size="10" dim="no" align="right" enabled="no" labelvisible="no" />
+            </Row>
+        </Column>
+        <Column title="Dates" align="left" layout="flow" expand="no">
+            <DateDataField required="yes" labelsize="10" size="10" attr="STARTDATE" dim="no" />
+            <DateDataField labelsize="10" size="10" attr="ENDDATE" dim="no" />
+        </Column>
+    </Row>
+    <SplitPane attr="Split2">
+        <Column title="Movements" expand="yes">
+            <Table entity="EMovements" cols="MOVEMENTID;DATE_;CONCEPT;MOVEMENTTYPEID;MOVEMENT;ENTITYID;OFFICEID;CDID;ANID;MOVEMENTTYPES" visiblecols="DATE_;CONCEPT;MOVEMENT;MOVEMENTTYPES" editable="yes" editablecolumns="DATE_;CONCEPT;MOVEMENT" updateentityeditablecolumns="DATE_;CONCEPT;MOVEMENT" key="MOVEMENTID" title="Documentos" parentkey="ANID" otherkeys="ENTITYID;OFFICEID;CDID" form="formmovementsfiltered.xml" />
+        </Column>
+        <Column title="ECustomerAccounts" expand="yes">
+            <Table entity="ECustomerAccounts" refreshbutton="yes" title="ECustomerAccounts" cols="ENTITYID;OFFICEID;CDID;ANID;CUSTOMERID;ACCOUNT;NAME;SURNAME;ID" visiblecols="NAME;SURNAME;ID" key="CUSTOMERID" parentkey="ENTITYID" otherkeys="OFFICEID;CDID;ANID" form="formcustomeraccounts.xml" />
+        </Column>
+    </SplitPane>
+</FormExt>

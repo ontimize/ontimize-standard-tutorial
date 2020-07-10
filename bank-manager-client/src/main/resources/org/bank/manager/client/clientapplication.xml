@@ -35,6 +35,10 @@
 		imanager="org.bank.manager.client.modules.management.IMCustomers"
 		tree="modules/management/treemanagercustomers.xml">
 		<FManager form="formaccounts.xml" fmid="Manageraccounts" />
+		<InteractionManager form="formaccounts.xml"
+			class="org.bank.manager.client.modules.management.IMAccounts" />
+		<InteractionManager form="formnegativeaccounts.xml"
+			class="org.bank.manager.client.modules.management.IMAccounts" />
 	</FormManager>
 	<FormManager id="Managerprofiles"
 		form="modules/administration/formprofiles.xml"

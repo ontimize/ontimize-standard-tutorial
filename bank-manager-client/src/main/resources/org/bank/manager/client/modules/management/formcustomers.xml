@@ -1,44 +1,65 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
-<FormExt entity="ECustomers" keys="CUSTOMERID" columns="NAME;ADDRESS;STARTDATE" setvalueorder="Name" title="clientmanagement" buttons="yes">
-    <FormHeader standardbuttons="yes" />
-    <IntegerDataField attr="CUSTOMERID" enabled="no" visible="no" />
-    <Row>
-        <Column expand="no" title="Imagen">
-            <ImageDataField attr="PHOTO" height="200" width="144" labelvisible="no" expand="yes" buttons="top" emptyimage="com/ontimize/gui/images/emptyimage2.gif" />
-        </Column>
-        <Column title="PersonalInformation">
-            <Row>
-                <Column>
-                    <Row>
-                        <TextDataField attr="NAME" required="yes" labelsize="14" dim="text" size="10" align="left" />
-                        <NIFDataField attr="ID" required="yes" labelsize="4" labelalign="right" dim="text" size="8" align="left" />
-                    </Row>
-                    <Row>
-                        <TextDataField attr="SURNAME" required="yes" labelsize="14" dim="text" size="10" align="left" />
-                    </Row>
-                </Column>
-  <Column expand="no">
-                    <DateDataField attr="STARTDATE" required="yes" labelsize="12" labelalign="right" dim="text" size="7" align="left" />
-                    <ReferenceComboDataField labelsize="12" attr="CUSTOMERTYPEID" entity="ECustomerTypes" cod="CUSTOMERTYPEID" labelalign="right" cols="DESCRIPTION" dim="text" form="formclienttype.xml" />
-                </Column>
-            </Row>
-            <TextDataField attr="ADDRESS" labelsize="14" dim="text" size="10" align="left" />
-            <com.ontimize.gui.field.WWWDataField attr="EMAIL" labelsize="14" dim="text" />
-        </Column>
-    </Row>
+<FormExt entity="ECustomers" keys="CUSTOMERID"
+	columns="NAME;ADDRESS;STARTDATE" setvalueorder="Name"
+	title="clientmanagement" buttons="yes">
+	<FormHeader standardbuttons="yes" />
+	<IntegerDataField attr="CUSTOMERID" enabled="no"
+		visible="no" />
+	<Row>
+		<Column expand="no" title="Imagen">
+			<ImageDataField attr="PHOTO" height="200" width="144"
+				labelvisible="no" expand="yes" buttons="top"
+				emptyimage="com/ontimize/gui/images/emptyimage2.gif" />
+		</Column>
+		<Column title="PersonalInformation">
+			<Row>
+				<Column>
+					<Row>
+						<TextDataField attr="NAME" required="yes"
+							labelsize="14" dim="text" size="10" align="left" />
+						<NIFDataField attr="ID" required="yes" labelsize="4"
+							labelalign="right" dim="text" size="8" align="left" />
+					</Row>
+					<Row>
+						<TextDataField attr="SURNAME" required="yes"
+							labelsize="14" dim="text" size="10" align="left" />
+					</Row>
+				</Column>
+				<Column expand="no">
+					<DateDataField attr="STARTDATE" required="yes"
+						labelsize="12" labelalign="right" dim="text" size="7" align="left" />
+					<ReferenceComboDataField labelsize="12"
+						attr="CUSTOMERTYPEID" entity="ECustomerTypes" cod="CUSTOMERTYPEID"
+						labelalign="right" cols="DESCRIPTION" dim="text"
+						form="formclienttype.xml" />
+				</Column>
+			</Row>
+			<TextDataField attr="ADDRESS" labelsize="14" dim="text"
+				size="10" align="left" />
+			<com.ontimize.gui.field.WWWDataField
+				attr="EMAIL" labelsize="14" dim="text" />
+		</Column>
+	</Row>
 
-    <TabPanel>
-        <Tab attr="ECustomerAccountBalance">
-            <Row expand="yes">
-                <Column title="ECustomerAccountBalance">
-                    <Table entity="ECustomerAccountBalance" disableinsert="yes" cols="ENTITYID;OFFICEID;CDID;ANID;ACCOUNT;BALANCE;CUSTOMERID;CUSTOMER" visiblecols="ACCOUNT;BALANCE" key="ANID" keys="ENTITYID;OFFICEID;CDID" title="ECustomerAccountBalance" form="formaccounts.xml" parentkey="CUSTOMERID" sumrow="BALANCE" rows="4" refreshbutton="yes" />
-                </Column>
-            </Row>
-        </Tab>
-        <Tab attr="Comments">
-            <Row expand="yes" title="">
-                <MemoDataField font="Verdana" attr="COMMENTS" labelvisible="no" expand="yes" dim="text" />
-            </Row>
-        </Tab>
-    </TabPanel>
+	<TabPanel>
+		<Tab attr="ECustomerAccountBalance">
+			<Row expand="yes">
+				<Column title="ECustomerAccountBalance">
+					<org.bank.manager.client.utils.AccountTable entity="ECustomerAccountBalance" disableinsert="yes"
+						cols="ENTITYID;OFFICEID;CDID;ANID;ACCOUNT;BALANCE;CUSTOMERID;CUSTOMER;STARTDATE;ENDDATE"
+						visiblecols="ACCOUNT;STARTDATE;ENDDATE;BALANCE" key="ANID"
+						keys="ENTITYID;OFFICEID;CDID" title="ECustomerAccountBalance"
+						form="formaccounts.xml" parentkey="CUSTOMERID" sumrow="BALANCE"
+						rows="4" refreshbutton="yes" editablecolumns="STARTDATE;ENDDATE"
+						updateentityeditablecolumns="STARTDATE;ENDDATE" />
+				</Column>
+			</Row>
+		</Tab>
+		<Tab attr="Comments">
+			<Row expand="yes" title="">
+				<MemoDataField font="Verdana" attr="COMMENTS"
+					labelvisible="no" expand="yes" dim="text" />
+			</Row>
+		</Tab>
+	</TabPanel>
 </FormExt>
