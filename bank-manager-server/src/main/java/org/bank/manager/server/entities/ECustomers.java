@@ -5,6 +5,9 @@ import java.util.Date;
 import java.util.Hashtable;
 import java.util.Vector;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.ontimize.db.DatabaseConnectionManager;
 import com.ontimize.db.EntityResult;
 import com.ontimize.db.TableEntity;
@@ -12,9 +15,20 @@ import com.ontimize.locator.EntityReferenceLocator;
 
 public class ECustomers extends TableEntity {
 
+//	private static final Logger logger = LoggerFactory.getLogger(ECustomers.class);
+	
 	public ECustomers(EntityReferenceLocator locator, DatabaseConnectionManager dbConnectionManager, int port)
 			throws Exception {
 		super(locator, dbConnectionManager, port);
+	}
+
+	@Override
+	public EntityResult query(Hashtable keysValues, Vector attributes, int sessionId, Connection con) throws Exception {
+		
+//		logger.debug("ECustomers: Executing query.");
+		System.out.println("ECustomers: Executing query.");
+		
+		return super.query(keysValues, attributes, sessionId, con);
 	}
 
 	@Override
@@ -33,23 +47,23 @@ public class ECustomers extends TableEntity {
 
 		return insertResult;
 	}
-	
+
 	@Override
 	public EntityResult delete(Hashtable keysValues, int sessionId, Connection con) throws Exception {
-		
+
 		TableEntity EAccounts = (TableEntity) this.getEntityReference("ECustomerAccounts");
 		Hashtable queryFilter = new Hashtable();
 		queryFilter.put("CUSTOMERID", keysValues.get("CUSTOMERID"));
 		EntityResult accountsResult = EAccounts.query(queryFilter, new Vector(), sessionId, con);
-		
+
 		if (accountsResult.calculateRecordNumber() > 0) {
-			 EntityResult result = this.createEntityResultForSessionId(sessionId);
-			 result.setCode(EntityResult.OPERATION_WRONG);
-			 result.setMessage("M_ACOUNTS_EXIST");
-			 return result;
+			EntityResult result = this.createEntityResultForSessionId(sessionId);
+			result.setCode(EntityResult.OPERATION_WRONG);
+			result.setMessage("M_ACOUNTS_EXIST");
+			return result;
 		} else {
-            return super.delete(keysValues, sessionId, con);
-        }
-		
+			return super.delete(keysValues, sessionId, con);
+		}
+
 	}
 }
