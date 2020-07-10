@@ -1,0 +1,6 @@
+<RemoteReferences>
+    <RemoteReference>
+        <Name>DataOperations</Name>
+        <Class>org.bank.manager.common.remote.CustomRemoteObject</Class>
+    </RemoteReference>
+</RemoteReferences>

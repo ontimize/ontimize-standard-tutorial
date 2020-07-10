@@ -3,17 +3,18 @@ package org.bank.manager.server.entities;
 import java.sql.Connection;
 import java.util.Date;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Vector;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.bank.manager.common.interfaces.IUpdateCustomerTypes;
 
 import com.ontimize.db.DatabaseConnectionManager;
 import com.ontimize.db.EntityResult;
+import com.ontimize.db.OntimizeConnection;
 import com.ontimize.db.TableEntity;
 import com.ontimize.locator.EntityReferenceLocator;
 
-public class ECustomers extends TableEntity {
+public class ECustomers extends TableEntity implements IUpdateCustomerTypes{
 
 //	private static final Logger logger = LoggerFactory.getLogger(ECustomers.class);
 	
@@ -66,4 +67,41 @@ public class ECustomers extends TableEntity {
 		}
 
 	}
+
+	@Override
+	public EntityResult updateCustomerTypes(List customerIds, Object typeId, int sessionId) throws Exception {
+		this.checkFinishedSession(sessionId);
+
+        Hashtable valuesToUpdate = new Hashtable();
+        valuesToUpdate.put("CUSTOMERTYPEID", typeId);
+
+        Hashtable keys = new Hashtable();
+
+        OntimizeConnection oConnection = this.connect();
+        Connection con = oConnection.getConnection();
+
+        try {
+            con.setAutoCommit(false);
+            
+            for (int i = 0; i < customerIds.size(); i++) {
+                keys.put("CUSTOMERID", customerIds.get(i));
+                super.update(valuesToUpdate, keys, sessionId, con);
+            }
+            
+            con.commit();
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+            EntityResult result = createEntityResultForSessionId(sessionId);
+            result.setCode(EntityResult.OPERATION_WRONG);
+            result.setMessage(e.getMessage());
+            con.rollback();
+            return result;
+        } finally {
+            con.setAutoCommit(true);
+            disconnect(oConnection);
+        }
+
+        return createEntityResultForSessionId(sessionId);
+    }
 }

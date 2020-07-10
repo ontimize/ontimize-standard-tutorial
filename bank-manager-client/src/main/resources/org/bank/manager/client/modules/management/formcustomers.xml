@@ -2,7 +2,10 @@
 <FormExt entity="ECustomers" keys="CUSTOMERID"
 	columns="NAME;ADDRESS;STARTDATE" setvalueorder="Name"
 	title="clientmanagement" buttons="yes">
-	<FormHeader standardbuttons="yes" />
+	<FormHeader standardbuttons="yes">
+	 <FormHeaderButton key="updateType" tip="updateType" icon="org/bank/manager/client/images/updatetype.png"/>
+	 <FormHeaderButton key="duplicateRecord" tip="duplicateRecord" icon="org/bank/manager/client/images/duplicaterecord.png"/>
+	</FormHeader>
 	<IntegerDataField attr="CUSTOMERID" enabled="no"
 		visible="no" />
 	<Row>
