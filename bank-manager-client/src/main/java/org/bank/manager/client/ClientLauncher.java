@@ -1,6 +1,7 @@
 package org.bank.manager.client;
 
 import com.ontimize.db.DatabaseConnectionManager;
+import com.ontimize.db.SQLStatementBuilder.ExtendedSQLConditionValuesProcessor;
 import com.ontimize.gui.ApplicationLauncher;
 import com.ontimize.gui.ApplicationToolBar;
 import com.ontimize.gui.Form;
@@ -16,6 +17,7 @@ public class ClientLauncher {
 		DatabaseConnectionManager.offsetString = "quickstart";
 		ApplicationToolBar.DEFAULT_BUTTON_SIZE = 30;
 		Form.WORD_TEMPLATES = 1;
+		ExtendedSQLConditionValuesProcessor exprProcessor = new ExtendedSQLConditionValuesProcessor();
 		BasicApplicationPreferences.remoteUserPreferences = true;
 		BasicApplicationPreferences.checkOldPreferences = false;
 		PermissionButton.setPropertyFile("org/bank/manager/client/permission/PermissionButton.properties");
