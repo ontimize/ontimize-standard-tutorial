@@ -11,7 +11,9 @@
 
 	<properties>
 		<hsqldatabase.path>src/main/db</hsqldatabase.path>
+		<hsqldatabase2.path>src/main/db2</hsqldatabase2.path>
 		<database.url>jdbc:hsqldb:hsql://localhost:9003/templateDB</database.url>
+		<database2.url>jdbc:hsqldb:hsql://localhost:9004/templateDB</database2.url>
 	</properties>
 
 	<build>
@@ -62,11 +64,11 @@
 			<version>${hsqldb.version}</version>
 		</dependency>
 
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.ontimize</groupId> -->
-<!-- 			<artifactId>ontimize-license</artifactId> -->
-<!-- 			<version>0.0.1-SNAPSHOT</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.ontimize</groupId> -->
+		<!-- <artifactId>ontimize-license</artifactId> -->
+		<!-- <version>0.0.1-SNAPSHOT</version> -->
+		<!-- </dependency> -->
 
 	</dependencies>
 
@@ -110,6 +112,53 @@
 								<argument>9003</argument>
 								<argument>-database.0</argument>
 								<argument>${hsqldatabase.path}/templateDB</argument>
+								<argument>-dbname.0</argument>
+								<argument>templateDB</argument>
+							</arguments>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>run_database_2</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<id>configure_database</id>
+								<phase>validate</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<available
+											file="${hsqldatabase2.path}/templateDB.script"
+											property="database.exist" />
+										<echo message="${hsqldatabase2.path}/templateDB.script" />
+										<copy tofile="${hsqldatabase2.path}/templateDB.script"
+											file="${hsqldatabase2.path}/templateDB.txt" />
+									</target>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.2.1</version>
+						<configuration>
+							<mainClass>org.hsqldb.Server</mainClass>
+							<arguments>
+								<argument>-port</argument>
+								<argument>9004</argument>
+								<argument>-database.0</argument>
+								<argument>${hsqldatabase2.path}/templateDB</argument>
 								<argument>-dbname.0</argument>
 								<argument>templateDB</argument>
 							</arguments>

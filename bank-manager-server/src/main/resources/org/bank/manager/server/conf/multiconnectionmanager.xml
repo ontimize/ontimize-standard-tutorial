@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectionManagers>
+   <ConnectionManager id="database2connection">
+      <DBProperties>
+         org/bank/manager/server/conf/database2.properties
+      </DBProperties>
+      <AutonumericalProperties></AutonumericalProperties>
+      <Entity>EUsers</Entity>
+      <Entity>EProfiles</Entity>
+   </ConnectionManager>
+</ConnectionManagers>
